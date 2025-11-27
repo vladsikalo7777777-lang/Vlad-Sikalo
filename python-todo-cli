@@ -1,1 +1,18 @@
+todo = []
+
+while True:
+    cmd = input("\n1) Додати\n2) Показати\n3) Видалити\n4) Вихід\n> ")
+
+    if cmd == "1":
+        task = input("Нова задача: ")
+        todo.append(task)
+    elif cmd == "2":
+        for i, t in enumerate(todo):
+            print(f"{i+1}. {t}")
+    elif cmd == "3":
+        num = int(input("Номер: ")) - 1
+        if 0 <= num < len(todo):
+            todo.pop(num)
+    elif cmd == "4":
+        break
 
